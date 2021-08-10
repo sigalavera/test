@@ -9,7 +9,7 @@
     "server": "nodemon Server/server.js",
     "client": "cd Client && npm start",
     "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
+    "heroku-postbuild": "cd Client && npm install --only=dev && npm install && npm run build"
   },
   "author": "",
   "license": "ISC",
