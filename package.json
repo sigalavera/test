@@ -4,6 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
+    "start": "nodemon Server/server.js",
     "setup": "npm install && cd Client && npm install",
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon Server/server.js",
