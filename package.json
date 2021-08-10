@@ -4,8 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon Server/server.js",
     "setup": "npm install && cd Client && npm install",
+    "start": "node Server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon Server/server.js",
     "client": "cd Client && npm start",
@@ -23,7 +23,8 @@
     "nodemon": "^2.0.12"
   },
   "devDependencies": {
-    "nodemon": "^2.0.12"
+    "nodemon": "^2.0.12",
+    "concurrently": "^6.2.1"
   },
   "engines": {
     "node": "14.x"

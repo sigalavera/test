@@ -1,7 +1,7 @@
-const express = require('express');
 const dotenv = require('dotenv')
 dotenv.config();
-const PORT = process.env.PORT || 27017;
+const PORT = process.env.PORT || 8080;
+const express = require('express');
 const cors = require('cors');
 const router = require('./routers/studentRouters')
 const db = require('./DB/Index')
@@ -26,10 +26,10 @@ app.listen(PORT, (error) => {
 //*************************/
 if(process.env.NODE_ENV === 'production'){
   // Serve any static files
-  app.use(express.static(path.join(__dirname, '../client/build')));
+  app.use(express.static(path.join(__dirname, '../Client/build')));
   // Handle React routing 
   app.get('*',(req,res)=>{
-      res.sendFile(path.join(__dirname, '../client/build','index.html'))
+      res.sendFile(path.join(__dirname, '../Client/build','index.html'))
   })
 }
 //*************************/
