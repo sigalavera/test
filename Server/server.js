@@ -1,6 +1,7 @@
 const express = require('express');
 const dotenv = require('dotenv')
 dotenv.config();
+const PORT = process.env.PORT || 27017;
 const cors = require('cors');
 const router = require('./routers/studentRouters')
 const db = require('./DB/Index')
@@ -17,7 +18,7 @@ app.use('/student', router);
 //   res.send("gooooooood")
 // })
 
-app.listen(27017, (error) => {
+app.listen(PORT, (error) => {
   if (error) return "error"
   console.log("The Server is on air, in port:27017");
 });
