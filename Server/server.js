@@ -12,7 +12,7 @@ app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 db.on('error',()=>{console.log("fgfgfghfhgf");})
 
-app.use('/student', router);
+app.use('/api/student', router);
 
 // app.get('/', (req, res)=>{
 //   res.send("gooooooood")
